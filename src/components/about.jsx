@@ -12,6 +12,7 @@ const About = () => {
                 <p className='text-xl'></p>
             </div>
         </div>
+        
     );
 }
 
