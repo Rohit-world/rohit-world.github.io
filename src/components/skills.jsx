@@ -37,6 +37,7 @@ const mySkill=[{
     src:react,
     title:"ReactJS",
     style:"shadow-blue-700"
+    
 },{
     id:5,
     src:redux,
