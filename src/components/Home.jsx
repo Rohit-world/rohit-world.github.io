@@ -3,7 +3,6 @@ import profilePic from "../assets/profilePic2.png"
 import{MdKeyboardArrowRight}from "react-icons/md"
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import Typewriter from "typewriter-effect"
 
 
 
