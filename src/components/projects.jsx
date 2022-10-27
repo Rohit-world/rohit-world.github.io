@@ -44,6 +44,7 @@ const Projects = () => {
                     <a href={git} target="_blank"><button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 '>Code</button></a>
                     </div>
                 </div>
+                
            
             ))}
              </div>
