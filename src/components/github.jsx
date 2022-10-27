@@ -19,6 +19,7 @@ const Github = () => {
                 <ReactTooltip delayShow={30} backgroundColor="black" textColor='white'  type='dark' />
                 </GitHubCalender>
             </div>
+            
             </div>
     </div>
     );
