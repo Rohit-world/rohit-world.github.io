@@ -26,6 +26,7 @@ const Home = () => {
                   <span className='group-hover:rotate-90 duration-300'><MdKeyboardArrowRight className='ml-1' size={25}/></span>
                  </button>
                    </a>
+                   
                 </div>
 
             </div>
