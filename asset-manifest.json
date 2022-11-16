@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.0164c43f.css",
-    "main.js": "/static/js/main.9ffae041.js",
+    "main.js": "/static/js/main.14b218bf.js",
     "static/media/profilePic2.png": "/static/media/profilePic2.8526e87f8fd30828f1aa.png",
+    "static/media/pharmeasylogo.png": "/static/media/pharmeasylogo.f9f0d411aa8dda0f89a2.png",
     "static/media/kickstarter.png": "/static/media/kickstarter.a84646f603a916c3d8cb.png",
     "static/media/weather.png": "/static/media/weather.ae709b963c5d60809fc2.png",
     "static/media/calendly.png": "/static/media/calendly.b9c26bdf0794de490fa6.png",
@@ -18,10 +19,10 @@
     "static/media/git.png": "/static/media/git.a54d3fa44e02f2f61e69.png",
     "index.html": "/index.html",
     "main.0164c43f.css.map": "/static/css/main.0164c43f.css.map",
-    "main.9ffae041.js.map": "/static/js/main.9ffae041.js.map"
+    "main.14b218bf.js.map": "/static/js/main.14b218bf.js.map"
   },
   "entrypoints": [
     "static/css/main.0164c43f.css",
-    "static/js/main.9ffae041.js"
+    "static/js/main.14b218bf.js"
   ]
 }
