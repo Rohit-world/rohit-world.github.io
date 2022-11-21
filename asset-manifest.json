@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4b68a96c.css",
-    "main.js": "/static/js/main.90834a8b.js",
+    "main.js": "/static/js/main.421dafed.js",
     "static/media/profilePic2.png": "/static/media/profilePic2.8526e87f8fd30828f1aa.png",
     "static/media/Logo1.png": "/static/media/Logo1.187bdde17b15f43a2892.png",
     "static/media/pharmeasylogo.png": "/static/media/pharmeasylogo.f9f0d411aa8dda0f89a2.png",
@@ -20,10 +20,10 @@
     "static/media/git.png": "/static/media/git.a54d3fa44e02f2f61e69.png",
     "index.html": "/index.html",
     "main.4b68a96c.css.map": "/static/css/main.4b68a96c.css.map",
-    "main.90834a8b.js.map": "/static/js/main.90834a8b.js.map"
+    "main.421dafed.js.map": "/static/js/main.421dafed.js.map"
   },
   "entrypoints": [
     "static/css/main.4b68a96c.css",
-    "static/js/main.90834a8b.js"
+    "static/js/main.421dafed.js"
   ]
 }
