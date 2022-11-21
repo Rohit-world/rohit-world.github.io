@@ -1,10 +1,11 @@
 import React from "react";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Contact = () => {
   return (
     <div
       name="contact"
-      className=" w-full  h-auto bg-gradient-to-b from-gray-800 to-black  text-white p-4  "
+      className=" w-full  h-auto bg-gradient-to-b from-gray-800 to-black  text-white pt-20  "
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
@@ -42,7 +43,8 @@ const Contact = () => {
             ></textarea>
             <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 ">
               {" "}
-              Let's talk
+             Let's Talk
+            
             </button>
           </form>
         </div>

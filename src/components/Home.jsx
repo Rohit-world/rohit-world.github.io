@@ -19,7 +19,7 @@ const Home = () => {
                 </p>
 
                 <div>
-                   <a href="/Rohit-Kumar-Resume.pdf" target="_blank" >
+                   <a href="https://drive.google.com/file/d/1Q67N5ciL7noBTZAwTPRWFGc7JrSvJdIv/view?usp=share_link" target="_blank" >
                    <button className='text-white group w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 '>
                   
                   Resume

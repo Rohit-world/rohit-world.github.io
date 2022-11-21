@@ -2,6 +2,8 @@ import React from "react";
 import{Link} from "react-scroll"
 
 import { FaBars, FaTimes } from "react-icons/fa";
+import Logo1 from "../assets/Logo1.png"
+
 const Navbar = () => {
   const [nav, setnav] = React.useState(false);
   const links = [
@@ -13,16 +15,16 @@ const Navbar = () => {
   ];
   
   return (
-    <div className="flex justify-between items-center w-full h-20 text-white bg-black fixed px-4">
+    <div className="flex justify-between items-center w-full h-20 text-white bg-black z-10 fixed px-4">
       <div>
-        <h1 className="text-5xl font-signature ml-2">Rohit</h1>
+       <img className="w-20 rounded-xl" src={Logo1} alt="" />
       </div>
 
       <ul className="hidden md:flex">
         {links.map(({link,id}) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+            className="px-4 cursor-pointer  capitalize font-bold  text-white hover:scale-105 duration-200"
           >
            <Link to={link} smooth duration={500}> {link}  </Link>
           </li>
