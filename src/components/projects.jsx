@@ -24,7 +24,7 @@ const Projects = () => {
     },{
       id: 1,
       src: calendlyLogo,
-      git: "https://github.com/xxRohitxx/greedy-roof-9177",
+      git: "https://github.com/Rohit-world/greedy-roof-9177",
       deployed: "https://startling-moonbeam-144a90.netlify.app/",
       title: "CALENDLY",
       description:
@@ -36,7 +36,7 @@ const Projects = () => {
 
       src: kickstarterLogo,
       deployed: "https://xxrohitxx-kickstarter.netlify.app/",
-      git: "https://github.com/xxRohitxx/economic-nest-8248/tree/main/Kickstarter",
+      git: "https://github.com/Rohit-world/economic-nest-8248/tree/main/Kickstarter",
       title: "KICKSTARTER",
       description:
         "Kickstarter Clone where You can see the projects Created on Kickstarter",
@@ -45,7 +45,7 @@ const Projects = () => {
     {
       id: 3,
       src: weatherLogo,
-      git: "https://github.com/xxRohitxx/Weather-App",
+      git: "https://github.com/Rohit-world/Weather-App",
 
       deployed: "https://cool-yeot-d2f099.netlify.app/",
       title: "WEATHER APP",
