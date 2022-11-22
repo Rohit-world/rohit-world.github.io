@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2e4ccd8f.css",
-    "main.js": "/static/js/main.9f6f1613.js",
+    "main.css": "/static/css/main.c7868a5c.css",
+    "main.js": "/static/js/main.fbe03d56.js",
     "static/media/profilePic2.png": "/static/media/profilePic2.8526e87f8fd30828f1aa.png",
     "static/media/Logo1.png": "/static/media/Logo1.187bdde17b15f43a2892.png",
     "static/media/pharmeasylogo.png": "/static/media/pharmeasylogo.f9f0d411aa8dda0f89a2.png",
@@ -19,11 +19,11 @@
     "static/media/css.png": "/static/media/css.5721a3928fe43de6baf8.png",
     "static/media/git.png": "/static/media/git.a54d3fa44e02f2f61e69.png",
     "index.html": "/index.html",
-    "main.2e4ccd8f.css.map": "/static/css/main.2e4ccd8f.css.map",
-    "main.9f6f1613.js.map": "/static/js/main.9f6f1613.js.map"
+    "main.c7868a5c.css.map": "/static/css/main.c7868a5c.css.map",
+    "main.fbe03d56.js.map": "/static/js/main.fbe03d56.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e4ccd8f.css",
-    "static/js/main.9f6f1613.js"
+    "static/css/main.c7868a5c.css",
+    "static/js/main.fbe03d56.js"
   ]
 }
