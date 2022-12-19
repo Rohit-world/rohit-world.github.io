@@ -4,10 +4,11 @@ import ReactTooltip from "react-tooltip"
 
 const Github = () => {
     return (
-        <div  className='w-full h-screen bg-gradient-to-b from-black to-gray-800 text-white pt-20'>
+        <div  className='w-full h-screen bg-black text-white pt-20'>
         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
             <div>
-                <p className='text-4xl font-bold inline border-b-4 border-gray-500 p-b '>GitHub </p>
+                <p className='text-4xl font-bold  text-red-600  p-b '>GitHub </p>
+                <p className="py-6">Here is my GitHub stats and Calender</p>
            
            
             </div>

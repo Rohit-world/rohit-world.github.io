@@ -59,21 +59,21 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white "
+      className="bg-black text-white pt-24"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+          <p className="text-4xl font-bold  text-red-600">
             Projects
           </p>
           <p className="py-6">Check Out some of my work right here</p>
         </div>
-        <div className="grid  gap-10 px-12 sm:px-0">
+        <div className="grid  gap-10 sm:px-0">
           {project.map(
             ({ id, src, git, deployed, title, description, techstacks }) => (
               <div
                 key={id}
-                className="shadow-md shadow-blue-500 rounded-lg duration-200 hover:scale-105"
+                className=" shadow-md shadow-slate-100 rounded-lg duration-200 hover:scale-105"
               >
                 <div className="grid sm:flex justify-evenly gap-5">
                   <div >
@@ -88,7 +88,7 @@ const Projects = () => {
 
                   <div className=" grid pl-10 pr-5 pt-5 gap-5 items-center text-center">
                     <p className=" sm:text-4xl font-extrabold ">{title}</p>
-                    <p className="text-sm  md:text-xl">{description}</p>
+                    <p className="text-sm italic  md:text-xl">{description}</p>
                     <div className="grid grid-cols-2 gap-5 ">
                       {techstacks.map((ele) => (
                         <button
@@ -107,12 +107,12 @@ const Projects = () => {
                     {" "}
                     <button className=" text-2xl w-1/2 px-6 py-3 m-4 duration-200 
                     hover:scale-105 ">
-                      Demo{" "}
+                      Live{" "}
                     </button>
                   </a>
                   <a href={git} target="_blank">
                     <button className="text-2xl w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105 ">
-                      Code
+                      GitHub
                     </button>
                   </a>
                 </div>

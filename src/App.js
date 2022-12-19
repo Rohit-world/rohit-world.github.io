@@ -8,6 +8,7 @@ import Skills from "./components/skills";
 import Social from "./components/social";
 
 
+
 function App() {
 
 
@@ -16,11 +17,11 @@ function App() {
    <Navbar/>
    <Home/>
    <About/>
-   <Projects/>
    <Skills/>
+   <Projects/>
    <Github/>
    <Contact/>
-   <Social/>
+   {/* <Social/> */}
    
     
     </div>

@@ -9,7 +9,7 @@ const Social = () => {
       id: 1,
       child: (
         <>
-          LinkedIn <FaLinkedin size={30} />
+         <FaLinkedin size={40} />
         </>
       ),
       href: "https://www.linkedin.com/in/iamrohit90/",
@@ -19,7 +19,7 @@ const Social = () => {
       id: 2,
       child: (
         <>
-          GitHub <FaGithub size={30} />
+          <FaGithub size={40} />
         </>
       ),
       href: "https://github.com/Rohit-world",
@@ -28,8 +28,8 @@ const Social = () => {
       id: 3,
       child: (
         <>
-          Mail
-          <HiOutlineMail size={30} />
+        
+          <HiOutlineMail size={40} />
         </>
       ),
       href: "mailto:rohitrs319791@gmail.com",
@@ -37,12 +37,12 @@ const Social = () => {
     },
   ];
   return (
-    <div className=" hidden lg:flex flex-col top-[35%] left-0 fixed">
+    <div className=" hidden lg:flex flex-col top-[35%] right-0 fixed">
       <ul>
         {links.map((link) => (
           <li
             key={link.id}
-            className={"flex justify-between items-center w-40 h-14 px-4  ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300" + " " + link.style}
+            className={"flex justify-between items-center w-40 h-14 px-4  ml-[100px]  hover:rounded-md duration-300" + " " + link.style}
           >
             <a
               href={link.href}

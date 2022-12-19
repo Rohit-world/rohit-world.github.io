@@ -8,32 +8,26 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Home = () => {
     return (
-        <div name="home" className='h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 text-white'>
+        <div name="home" className='h-screen w-full bg-black text-white'>
            <div className='max-w-screen-lg mx-auto flex  items-center  h-full px-4 md:flex-row justify-center'>
             <div className='flex flex-col justify-center h-full '>
-                <h1 className='text-3xl md:text-3xl lg:text-5xl font-bold md:whitespace-nowrap'>
-                Full stack  developer
+                <h1 className='text-3xl md:text-3xl lg:text-5xl italic font-bold md:whitespace-nowrap text-red-600'>
+                Full Stack Developer
                 </h1>
-                <p className='text-sm text-gray-500 py-4 max-w-md md:text-2xl '>
-                Aspiring full-stack developer with a specialization in MERN stack with problem solving skills
+                <p className='text-sm py-4 max-w-md md:text-2xl italic'>
+                Hi, I am Rohit Kumar an aspiring full-stack developer with a specialization in MERN stack with problem solving skills
                 </p>
 
                 <div>
-                   <a href="https://drive.google.com/file/d/1Q67N5ciL7noBTZAwTPRWFGc7JrSvJdIv/view?usp=share_link" target="_blank" >
-                   <button className='text-white group w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 '>
                   
-                  Resume
-                  <span className='group-hover:rotate-90 duration-300'><MdKeyboardArrowRight className='ml-1' size={25}/></span>
-                 </button>
-                   </a>
                    
                 </div>
 
             </div>
-            <div ><  img src={profilePic} alt="profile-pic" className='rounded-full mx-auto w-2/3 md:w-2/4 ' /></div>
+            <div ><  img src={profilePic} alt="profile-pic" className='rounded-full mx-auto w-2/3 md:w-2/4 shadow-lg shadow-red-500' /></div>
             
 
-            <div  className='lg:hidden'>
+            <div  className=''>
            <ul className="flex-col space-y-10">
         {links.map((link) => (
           <li className='hover:opacity-40 duration-300 hover'  key={link.id} 
@@ -57,7 +51,9 @@ const Home = () => {
           
            </div>
           
-           
+           {/* <div className='flex text-center '>
+            <h1 className='mx-auto'>Rohit</h1>
+           </div> */}
 
        
         </div>
@@ -79,7 +75,7 @@ const links = [
       id: 1,
       child: (
         <>
-         <FaLinkedin className='hover:scale-110' size={30} />
+         <FaLinkedin className='hover:scale-110' size={40} />
         </>
       ),
       href: "https://www.linkedin.com/in/iamrohit90/",
@@ -89,17 +85,17 @@ const links = [
       id: 2,
       child: (
         <>
-         <FaGithub className='hover:scale-110' size={30} />
+         <FaGithub className='hover:scale-110' size={40} />
         </>
       ),
-      href: "https://github.com/xxRohitxx",
+      href: "https://github.com/Rohit-world",
     },
     {
       id: 3,
       child: (
         <>
          
-          <HiOutlineMail className='hover:scale-110' size={30} />
+          <HiOutlineMail className='hover:scale-110' size={40} />
         </>
       ),
       href: "mailto:rohitrs319791@gmail.com",
