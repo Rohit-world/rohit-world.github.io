@@ -28,7 +28,7 @@ target="_blank"        href="https://drive.google.com/file/d/1Q67N5ciL7noBTZAwTP
         {links.map(({link,id,name}) => (
           <li
             key={id}
-            className="px-10 cursor-pointer  capitalize font-bold   hover:scale-125 duration-200  subpixel-antialiased flex justify-center gap-6 text-xl " 
+            className="px-10 cursor-pointer  capitalize font-bold   hover:scale-125 hover:text-red-500 duration-200  subpixel-antialiased flex justify-center gap-6 text-xl " 
           >
           <Link to={link} smooth duration={500}> {name}  </Link>
           </li>
@@ -37,7 +37,7 @@ target="_blank"        href="https://drive.google.com/file/d/1Q67N5ciL7noBTZAwTP
 
 
 
-      
+
 
       <div onClick={()=>setnav(!nav)} className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden">
         {nav?<FaTimes size={30}/>:<FaBars size={30} />}

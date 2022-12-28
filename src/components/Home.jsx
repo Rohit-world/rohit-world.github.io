@@ -11,7 +11,7 @@ const Home = () => {
         <div name="home" className='h-screen w-full bg-black text-white'>
            <div className='max-w-screen-lg mx-auto flex  items-center  h-full px-4 md:flex-row justify-center'>
             <div className='flex flex-col justify-center h-full '>
-                <h1 className='text-3xl md:text-3xl lg:text-5xl italic font-bold md:whitespace-nowrap text-red-600'>
+                <h1 className='text-3xl md:text-3xl lg:text-5xl italic font-bold md:whitespace-nowrap text-red-500'>
                 Full Stack Developer
                 </h1>
                 <p className='text-sm py-4 max-w-md md:text-2xl italic'>
@@ -75,7 +75,7 @@ const links = [
       id: 1,
       child: (
         <>
-         <FaLinkedin className='hover:scale-110' size={40} />
+        <FaLinkedin className='hover:scale-110' size={40} />
         </>
       ),
       href: "https://www.linkedin.com/in/iamrohit90/",

@@ -93,7 +93,7 @@ const Projects = () => {
                       {techstacks.map((ele) => (
                         <button
                           key={ele}
-                          className=" bg-transparent  shadow-md shadow-slate-500 text-white font-semibold hover:text-white py-1 px-3 border border-white  rounded md:text-lg max-w-lg"
+                          className=" bg-white  shadow-md shadow-slate-500 text-black font-semibold hover:scale-105 py-1 px-3 border border-white  rounded md:text-lg max-w-lg"
                         >
                           {ele}
                         </button>

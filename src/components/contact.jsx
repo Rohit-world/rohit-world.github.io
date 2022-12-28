@@ -41,7 +41,7 @@ const Contact = () => {
               rows="8"
               className="p-2 placeholder-slate-100 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
-            <button className="text-white bg-transparent outline   px-6 py-3 my-8 mx-auto  items-center rounded-md hover:scale-110 duration-300 ">
+            <button className="text-white bg-transparent text-bold w-40 outline   px-6 py-3 my-8 mx-auto  items-center rounded-md hover:scale-110 hover:bg-white hover:text-black duration-300  ">
               {" "}
              Send
             
