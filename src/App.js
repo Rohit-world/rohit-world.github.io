@@ -7,23 +7,20 @@ import Projects from "./components/projects";
 import Skills from "./components/skills";
 import Social from "./components/social";
 
-
-
 function App() {
-
-
   return (
-    <div  className="App gap-x-10" >
-   <Navbar/>
-   <Home/>
-   <About/>
-   <Skills/>
-   <Projects/>
-   <Github/>
-   <Contact/>
-   {/* <Social/> */}
-   
-    
+    <div
+      
+      className="  bg-[url('https://i.ibb.co/vLDk1WV/star.gif')] bg-no-repeat bg-cover  bg-black "
+    >
+      <Navbar />
+      <Home  />
+      <About />
+      <Skills />
+      <Projects />
+      <Github />
+      <Contact />
+      {/* <Social/> */}
     </div>
   );
 }

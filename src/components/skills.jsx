@@ -93,11 +93,11 @@ title:"Mongo DB"
   return (
     <div
       name="skills"
-      className="bg-black w-full  h-auto  "
+      className=" w-full  h-auto backdrop-blur-md "
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
-          <p className="text-4xl font-bold  text-red-600 p-2 ">Skills and Tools</p>
+          <p className="text-4xl font-bold  text-transparent bg-gradient-to-b from-orange-500 to-yellow-300 bg-clip-text p-2 ">Skills and Tools</p>
           <p className="py-6">These are the technologies I've worked with</p>
         </div>
 

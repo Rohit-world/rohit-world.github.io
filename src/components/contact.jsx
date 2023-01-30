@@ -5,11 +5,11 @@ const Contact = () => {
   return (
     <div
       name="contact"
-      className=" w-full  h-auto bg-black text-white pt-20  "
+      className=" w-full  h-auto text-white pt-20 backdrop-blur-md  "
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
-          <p className="text-4xl font-bold  text-red-600 p-2 ">Contact</p>
+          <p className="text-4xl font-bold  text-transparent bg-gradient-to-b from-orange-500 to-yellow-300 bg-clip-text p-2 ">Contact</p>
           <p className="py-6">Submit the form below to get in touch with me</p>
         </div>
         
@@ -41,7 +41,7 @@ const Contact = () => {
               rows="8"
               className="p-2 placeholder-slate-100 bg-transparent border-2 rounded-md text-white focus:outline-none"
             ></textarea>
-            <button className="text-white bg-transparent text-bold w-40 outline   px-6 py-3 my-8 mx-auto  items-center rounded-md hover:scale-110 hover:bg-white hover:text-black duration-300  ">
+            <button className="text-white bg-transparent text-bold w-40 outline   px-6 py-3 my-8 mx-auto  items-center rounded-md hover:scale-110 hover:bg-gradient-to-b from-orange-500 to-yellow-300  ">
               {" "}
              Send
             

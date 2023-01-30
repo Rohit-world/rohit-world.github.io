@@ -3,10 +3,12 @@ import calendlyLogo from "../assets/calendly.png";
 import kickstarterLogo from "../assets/kickstarter.png";
 import weatherLogo from "../assets/weather.png";
 import pharmeasylogo from "../assets/pharmeasylogo.png"
+import movingcar from "../assets/MovingCar.png"
+import ExproBook from "../assets/ExproBook.png"
 const Projects = () => {
   const project = [
     {
-      id: 4,
+      id: 1,
       src: pharmeasylogo,
       git: "https://github.com/prem-sardhan/electric-school-1726",
 
@@ -21,8 +23,27 @@ const Projects = () => {
       "CSS",
       
       "Chakra UI","SendGrid","Material UI"],
-    },{
+    },
+    {
       id: 1,
+      src: ExproBook,
+      git: "https://github.com/aamirkhan9420/-roomy-tree-8865",
+
+      deployed: "https://exprobook.netlify.app/",
+      title: " EXPROBOOK",
+      description:
+        "Exprobook is an online travel shopping platform. The website can be used to book airline tickets, hotel reservations, car rentals, cruise ships, and vacation packages.",
+      techstacks: ["React",
+
+      "JS",
+      
+      "Chakra UI","NodeJS","Express JS","MongoDB"],
+    },
+    
+    
+    
+    {
+      id: 2,
       src: calendlyLogo,
       git: "https://github.com/Rohit-world/greedy-roof-9177",
       deployed: "https://startling-moonbeam-144a90.netlify.app/",
@@ -32,7 +53,7 @@ const Projects = () => {
       techstacks: ["HTML", "CSS", "JS", "API"],
     },
     {
-      id: 2,
+      id: 3,
 
       src: kickstarterLogo,
       deployed: "https://xxrohitxx-kickstarter.netlify.app/",
@@ -43,7 +64,18 @@ const Projects = () => {
       techstacks: ["HTML", "CSS", "JS", "React", "ChakraUI"],
     },
     {
-      id: 3,
+      id: 4,
+      src: movingcar,
+      git: "https://github.com/Rohit-world/MovingCar",
+
+      deployed: "https://car-verce-rohit.vercel.app/",
+      title: "MOVING CAR",
+      description:
+        "A mini project where I tried some animations of CSS and made a moving car ",
+      techstacks: ["HTML", "CSS", "JS"],
+    },
+    {
+      id: 5,
       src: weatherLogo,
       git: "https://github.com/Rohit-world/Weather-App",
 
@@ -59,11 +91,11 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="bg-black text-white pt-24"
+      className=" text-white pt-24 backdrop-blur-md"
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold  text-red-600">
+          <p className="text-4xl font-bold text-transparent bg-gradient-to-b from-orange-500 to-yellow-300 bg-clip-text">
             Projects
           </p>
           <p className="py-6">Check Out some of my work right here</p>
@@ -71,16 +103,20 @@ const Projects = () => {
         <div className="grid  gap-10 sm:px-0">
           {project.map(
             ({ id, src, git, deployed, title, description, techstacks }) => (
-              <div
-                key={id}
-                className=" shadow-md shadow-slate-100 rounded-lg duration-200 hover:scale-105"
+              <div key={id} className="relative">
+
+                <div className="absolute inset-0 bg-yellow-600 blur-sm"></div>
+
+                <div
+                
+                className=" relative shadow-md bg-black shadow-slate-100 rounded-lg duration-200 hover:scale-105"
               >
                 <div className="grid sm:flex justify-evenly gap-5">
                   <div >
                     {" "}
                     <img
                       width="100%"
-                      className="rounded-md "
+                      className="rounded-md " 
                       src={src}
                       alt=""
                     />
@@ -116,6 +152,13 @@ const Projects = () => {
                     </button>
                   </a>
                 </div>
+              </div>
+
+
+
+
+
+
               </div>
             )
           )}
