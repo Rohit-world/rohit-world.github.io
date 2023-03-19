@@ -24,7 +24,7 @@ const Github = () => {
             <div className='grid  mt-10  justify-between items-center gap-4 lg:flex '>
                 <img  src="https://github-readme-streak-stats.herokuapp.com?user=Rohit-world&hide_border=true&background=66000000&ring=FFFFFF&fire=FFFFFF&dates=FFFFFF&sideLabels=FFFFFF&currStreakLabel=FFFFFF&sideNums=FFFFFF&currStreakNum=FFFFFF&stroke=66000000"></img> 
           
-            <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=Rohit-world&show_icons=true&theme=transparent&text_color=FFFFFF&title_color=FFFFFF&icon_color=FFFFFF&border=true&count_private=true&hide_border=true" alt="" /></div>
+ <img src="https://github-readme-stats.vercel.app/api?username=Rohit-world&show_icons=true&theme=transparent&text_color=FFFFFF&title_color=FFFFFF&icon_color=FFFFFF&border=true&count_private=true&hide_border=true" alt="" /></div>
           
             </div>
 

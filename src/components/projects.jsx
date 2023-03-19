@@ -5,8 +5,28 @@ import weatherLogo from "../assets/weather.png";
 import pharmeasylogo from "../assets/pharmeasylogo.png"
 import movingcar from "../assets/MovingCar.png"
 import ExproBook from "../assets/ExproBook.png"
+import RevisionVerse from "../assets/revisionverse.png"
 const Projects = () => {
   const project = [
+    {
+      id: 8,
+      src: "https://i.ibb.co/ZBtVWFJ/Screenshot-2023-03-18-010740.png",
+      git: "https://github.com/Rohit-world/Be-social",
+
+      deployed: "https://besocial-r.netlify.app/",
+      title: "Be-Social",
+      description:
+        "Be-Social is a Full-stack Web App Where user Can Post Blogs Articles and Can Perform all CRUD operations",
+      techstacks: ["React",
+
+      "Redux",
+      "Chakra UI",
+      
+      "Node JS",
+      
+      "Express","Mongodb"],
+    },
+
     {
       id: 1,
       src: pharmeasylogo,
@@ -15,17 +35,32 @@ const Projects = () => {
       deployed: "https://holistic-remedies.netlify.app/",
       title: " Holistic Remedies",
       description:
-        "A Frontend Pharma application where you can buy Products with seprate admin side  ",
-      techstacks: ["React",
-
-      "JS",
-      
-      "CSS",
-      
-      "Chakra UI","SendGrid","Material UI"],
+        "A FullStack Pharma application where you can buy Products and have seprate admin side  ",
+      techstacks: [
+      "React",
+      "Chakra UI",
+      "Material UI",
+      "Node JS",
+      "Express JS",
+      "Mongo DB"],
     },
     {
-      id: 1,
+      id: 9,
+      src: "https://i.ibb.co/dW9Xvm1/Screenshot-20230210-162624.png",
+      git: "https://github.com/Rohit-world/netflix-clone",
+
+      deployed: "https://rohit-netflix-clone.netlify.app/",
+      title: " NETFLIX-Clone",
+      description:
+        "A Full-Stack Clone of Netflix which has Features Like Authentication and Private Routing",
+      techstacks: ["React JS","Redux",
+      "CSS",
+      
+      "Node JS","Mongo DB","Express JS"],
+    },
+
+    {
+      id: 2,
       src: ExproBook,
       git: "https://github.com/aamirkhan9420/-roomy-tree-8865",
 
@@ -43,7 +78,7 @@ const Projects = () => {
     
     
     {
-      id: 2,
+      id: 3,
       src: calendlyLogo,
       git: "https://github.com/Rohit-world/greedy-roof-9177",
       deployed: "https://startling-moonbeam-144a90.netlify.app/",
@@ -53,7 +88,7 @@ const Projects = () => {
       techstacks: ["HTML", "CSS", "JS", "API"],
     },
     {
-      id: 3,
+      id: 4,
 
       src: kickstarterLogo,
       deployed: "https://xxrohitxx-kickstarter.netlify.app/",
@@ -64,7 +99,7 @@ const Projects = () => {
       techstacks: ["HTML", "CSS", "JS", "React", "ChakraUI"],
     },
     {
-      id: 4,
+      id: 5,
       src: movingcar,
       git: "https://github.com/Rohit-world/MovingCar",
 
@@ -75,7 +110,7 @@ const Projects = () => {
       techstacks: ["HTML", "CSS", "JS"],
     },
     {
-      id: 5,
+      id: 6,
       src: weatherLogo,
       git: "https://github.com/Rohit-world/Weather-App",
 
@@ -84,6 +119,16 @@ const Projects = () => {
       description:
         "A Responsive Weather app That shows current weather with forcaste of 5 days and the map of the particular city ",
       techstacks: ["HTML", "CSS", "JS", "API"],
+    },{
+      id: 7,
+      src: RevisionVerse,
+      git: "https://github.com/Rohit-world/algo-squad",
+
+      deployed: "https://revisionverse.vercel.app/",
+      title: "REVISION VERSE",
+      description:
+        "A Hackathon Project of 2 Days Which Provide Basic Concepts of Web Development along with Chatting Functionality ",
+      techstacks: ["NEXT JS", "NODE JS", "MONGO DB", "SOCKET.IO"],
     },
     
   ];
