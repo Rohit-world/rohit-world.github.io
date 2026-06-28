@@ -99,16 +99,16 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .bat__bob { display: block; animation: batBob var(--bob, 3.2s) ease-in-out infinite !important; }
 .bat__svg {
   display: block; width: var(--size, 34px); height: auto;
-  color: #2c323b; opacity: var(--op, 0.7);
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+  color: #353d47; opacity: var(--op, 0.7);
+  filter: drop-shadow(0 0 3px rgba(136, 166, 192, 0.3));
   animation: batFlap var(--flap, 0.34s) ease-in-out infinite !important;
-  transform-origin: 50% 50%;
+  transform-origin: 50% 45%;
 }
 .bat--rev .bat__svg { scale: -1 1; }
-@keyframes batFly { from { transform: translate(-15vw, var(--sy, 0)); } to { transform: translate(115vw, var(--ey, 0)); } }
-@keyframes batFlyRev { from { transform: translate(115vw, var(--sy, 0)); } to { transform: translate(-15vw, var(--ey, 0)); } }
-@keyframes batBob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-18px) rotate(2deg); } }
-@keyframes batFlap { 0%, 100% { transform: scaleX(1) scaleY(1); } 50% { transform: scaleX(0.58) scaleY(1.06); } }
+@keyframes batFly { from { transform: translateX(-12vw); } to { transform: translateX(112vw); } }
+@keyframes batFlyRev { from { transform: translateX(112vw); } to { transform: translateX(-12vw); } }
+@keyframes batBob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-26px) rotate(3deg); } }
+@keyframes batFlap { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(0.5); } }
 /* Motion-sensitive visitors: keep a calm, slow drift instead of flapping */
 @media (prefers-reduced-motion: reduce) {
   .bat { animation-duration: 80s !important; }
