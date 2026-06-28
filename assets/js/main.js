@@ -470,28 +470,31 @@
     const layer = document.getElementById('bats');
     if (!layer) return;
 
-    const BAT_SVG = '<svg class="bat__svg" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg" fill="currentColor">' +
-      '<path d="M50 17 C47 11 44 6 40 6 C40 9 39 11 37 12 C38 9 37 6 35 4 C33 8 32 12 32 17 ' +
-      'C26 13 18 12 10 15 C14 16 17 18 18 21 C12 19 6 21 0 27 C8 24 15 24 21 26 C16 28 12 32 10 38 ' +
-      'C18 32 26 30 34 32 C40 33 45 36 50 43 C55 36 60 33 66 32 C74 30 82 32 90 38 C88 32 84 28 79 26 ' +
-      'C85 24 92 24 100 27 C94 21 88 19 82 21 C83 18 86 16 90 15 C82 12 74 13 68 17 C68 12 67 8 65 4 ' +
-      'C63 6 62 9 63 12 C61 11 60 9 60 6 C56 6 53 11 50 17 Z"/></svg>';
+    const BAT_SVG = '<svg class="bat__svg" viewBox="0 0 120 56" xmlns="http://www.w3.org/2000/svg" fill="currentColor">' +
+      '<path d="M60 17 C58 12 56 8 54 6 C53 9 51 13 50 17 C49 18 48 19 47 21 ' +
+      'C36 9 22 4 6 6 C12 12 16 18 18 24 C22 21 26 21 28 26 C31 23 35 23 37 28 ' +
+      'C41 25 45 26 48 31 C52 29 56 30 60 40 C64 30 68 29 72 31 C75 26 79 25 83 28 ' +
+      'C85 23 89 23 92 26 C94 21 98 21 102 24 C104 18 108 12 114 6 C98 4 84 9 73 21 ' +
+      'C72 19 71 18 70 17 C69 13 67 9 66 6 C64 8 62 12 60 17 Z"/></svg>';
 
-    const count = prefersReduced ? 5 : (window.innerWidth < 720 ? 8 : 14);
+    const count = prefersReduced ? 6 : (window.innerWidth < 720 ? 9 : 16);
     const rand = (a, b) => a + Math.random() * (b - a);
 
     for (let i = 0; i < count; i++) {
       const bat = document.createElement('span');
       const rev = Math.random() > 0.5;
       bat.className = 'bat' + (rev ? ' bat--rev' : '');
-      const size = rand(20, 52);
-      bat.style.setProperty('--top', rand(4, 88) + '%');
+      const size = rand(16, 58);
+      bat.style.setProperty('--top', rand(2, 90) + '%');
       bat.style.setProperty('--size', size.toFixed(0) + 'px');
-      bat.style.setProperty('--dur', rand(16, 34).toFixed(1) + 's');
+      bat.style.setProperty('--dur', rand(14, 30).toFixed(1) + 's');
       bat.style.setProperty('--delay', (-rand(0, 30)).toFixed(1) + 's');
-      bat.style.setProperty('--bob', rand(2.4, 4.4).toFixed(1) + 's');
-      bat.style.setProperty('--flap', rand(0.22, 0.4).toFixed(2) + 's');
-      bat.style.setProperty('--op', rand(0.4, 0.85).toFixed(2));
+      bat.style.setProperty('--bob', rand(2.2, 4.2).toFixed(1) + 's');
+      bat.style.setProperty('--flap', rand(0.3, 0.6).toFixed(2) + 's');
+      bat.style.setProperty('--op', rand(0.45, 0.9).toFixed(2));
+      // diagonal drift: start/end vertical offsets give each bat its own slope
+      bat.style.setProperty('--sy', rand(-12, 12).toFixed(1) + 'vh');
+      bat.style.setProperty('--ey', rand(-12, 12).toFixed(1) + 'vh');
       bat.innerHTML = '<span class="bat__bob">' + BAT_SVG + '</span>';
       layer.appendChild(bat);
     }
