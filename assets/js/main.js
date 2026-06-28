@@ -468,7 +468,7 @@
      --------------------------------------------------------- */
   (function bats() {
     const layer = document.getElementById('bats');
-    if (!layer || prefersReduced) return;
+    if (!layer) return;
 
     const BAT_SVG = '<svg class="bat__svg" viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg" fill="currentColor">' +
       '<path d="M50 17 C47 11 44 6 40 6 C40 9 39 11 37 12 C38 9 37 6 35 4 C33 8 32 12 32 17 ' +
@@ -477,21 +477,21 @@
       'C85 24 92 24 100 27 C94 21 88 19 82 21 C83 18 86 16 90 15 C82 12 74 13 68 17 C68 12 67 8 65 4 ' +
       'C63 6 62 9 63 12 C61 11 60 9 60 6 C56 6 53 11 50 17 Z"/></svg>';
 
-    const count = window.innerWidth < 720 ? 6 : 11;
+    const count = prefersReduced ? 5 : (window.innerWidth < 720 ? 8 : 14);
     const rand = (a, b) => a + Math.random() * (b - a);
 
     for (let i = 0; i < count; i++) {
       const bat = document.createElement('span');
       const rev = Math.random() > 0.5;
       bat.className = 'bat' + (rev ? ' bat--rev' : '');
-      const size = rand(18, 46);
+      const size = rand(20, 52);
       bat.style.setProperty('--top', rand(4, 88) + '%');
       bat.style.setProperty('--size', size.toFixed(0) + 'px');
       bat.style.setProperty('--dur', rand(16, 34).toFixed(1) + 's');
       bat.style.setProperty('--delay', (-rand(0, 30)).toFixed(1) + 's');
       bat.style.setProperty('--bob', rand(2.4, 4.4).toFixed(1) + 's');
       bat.style.setProperty('--flap', rand(0.22, 0.4).toFixed(2) + 's');
-      bat.style.setProperty('--op', rand(0.35, 0.8).toFixed(2));
+      bat.style.setProperty('--op', rand(0.4, 0.85).toFixed(2));
       bat.innerHTML = '<span class="bat__bob">' + BAT_SVG + '</span>';
       layer.appendChild(bat);
     }
