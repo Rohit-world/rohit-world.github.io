@@ -93,15 +93,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .bats { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .bat {
   position: absolute; left: 0; top: var(--top, 20%); will-change: transform;
-  animation: batFly var(--dur, 26s) linear var(--delay, 0s) infinite !important;
+  animation: batFly var(--dur, 26s) linear var(--delay, 0s) infinite;
 }
-.bat--rev { animation-name: batFlyRev !important; }
-.bat__bob { display: block; animation: batBob var(--bob, 3.2s) ease-in-out infinite !important; }
+.bat--rev { animation-name: batFlyRev; }
+.bat__bob { display: block; animation: batBob var(--bob, 3.2s) ease-in-out infinite; }
 .bat__svg {
   display: block; width: var(--size, 34px); height: auto;
-  color: #353d47; opacity: var(--op, 0.7);
-  filter: drop-shadow(0 0 3px rgba(136, 166, 192, 0.3));
-  animation: batFlap var(--flap, 0.34s) ease-in-out infinite !important;
+  color: #2f363f; opacity: var(--op, 0.7);
+  filter: drop-shadow(0 0 3px rgba(136, 166, 192, 0.28));
+  animation: batFlap var(--flap, 0.34s) ease-in-out infinite;
   transform-origin: 50% 45%;
 }
 .bat--rev .bat__svg { scale: -1 1; }
@@ -109,11 +109,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 @keyframes batFlyRev { from { transform: translateX(112vw); } to { transform: translateX(-12vw); } }
 @keyframes batBob { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-26px) rotate(3deg); } }
 @keyframes batFlap { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(0.5); } }
-/* Motion-sensitive visitors: keep a calm, slow drift instead of flapping */
-@media (prefers-reduced-motion: reduce) {
-  .bat { animation-duration: 80s !important; }
-  .bat__bob, .bat__svg { animation: none !important; }
-}
 
 .cursor-glow {
   position: fixed; top: 0; left: 0; z-index: -1; pointer-events: none;
