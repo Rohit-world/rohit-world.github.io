@@ -306,6 +306,43 @@
   }
 
   /* ---------------------------------------------------------
+     3D parallax profile (hero cutout)
+     --------------------------------------------------------- */
+  (function profile3d() {
+    const stage = document.getElementById('profile3d');
+    const scene = document.getElementById('profile3dScene');
+    if (!stage || !scene) return;
+    if (isTouch || prefersReduced) return; // CSS idle-float handles the rest
+
+    const MAX = 16; // deg
+    let raf = null, tx = 0, ty = 0, cx = 0, cy = 0;
+
+    function animate() {
+      cx += (tx - cx) * 0.12;
+      cy += (ty - cy) * 0.12;
+      scene.style.transform = `rotateX(${cy}deg) rotateY(${cx}deg)`;
+      if (Math.abs(tx - cx) > 0.05 || Math.abs(ty - cy) > 0.05) {
+        raf = requestAnimationFrame(animate);
+      } else { raf = null; }
+    }
+    function kick() { if (!raf) raf = requestAnimationFrame(animate); }
+
+    stage.addEventListener('mousemove', (e) => {
+      const r = stage.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      tx = px * MAX;        // rotateY
+      ty = -py * MAX;       // rotateX
+      stage.classList.add('is-tilting');
+      kick();
+    });
+    stage.addEventListener('mouseleave', () => {
+      tx = 0; ty = 0; kick();
+      setTimeout(() => stage.classList.remove('is-tilting'), 220);
+    });
+  })();
+
+  /* ---------------------------------------------------------
      Magnetic buttons
      --------------------------------------------------------- */
   if (!isTouch && !prefersReduced) {

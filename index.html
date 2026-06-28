@@ -113,14 +113,24 @@
         </div>
 
         <div class="hero__visual reveal" data-delay="3">
-          <div class="hero__avatar tilt" data-tilt>
-            <div class="hero__avatar-ring"></div>
-            <div class="hero__avatar-ring hero__avatar-ring--2"></div>
-            <div class="hero__avatar-glow"></div>
-            <img src="assets/images/profile.png" alt="Rohit Kumar" class="hero__avatar-img" />
-            <div class="hero__badge hero__badge--1">⚛️ React</div>
-            <div class="hero__badge hero__badge--2">🤖 AI / RAG</div>
-            <div class="hero__badge hero__badge--3">⬢ Node.js</div>
+          <div class="profile3d" id="profile3d">
+            <div class="profile3d__scene" id="profile3dScene">
+              <div class="profile3d__glow" data-z="-80"></div>
+              <div class="profile3d__ring profile3d__ring--1" data-z="-30"></div>
+              <div class="profile3d__ring profile3d__ring--2" data-z="-10"></div>
+              <div class="profile3d__frame" data-z="0">
+                <div class="profile3d__frame-grid"></div>
+                <span class="profile3d__frame-tag">&lt;/&gt; developer</span>
+                <span class="profile3d__frame-corner profile3d__frame-corner--tl"></span>
+                <span class="profile3d__frame-corner profile3d__frame-corner--br"></span>
+              </div>
+              <img src="assets/images/profile-cutout.png" alt="Rohit Kumar" class="profile3d__img" data-z="50" />
+              <span class="profile3d__badge profile3d__badge--1" data-z="120">⚛️ React</span>
+              <span class="profile3d__badge profile3d__badge--2" data-z="150">🤖 AI / RAG</span>
+              <span class="profile3d__badge profile3d__badge--3" data-z="100">⬢ Node.js</span>
+              <span class="profile3d__spark profile3d__spark--1" data-z="90"></span>
+              <span class="profile3d__spark profile3d__spark--2" data-z="130"></span>
+            </div>
           </div>
         </div>
       </div>

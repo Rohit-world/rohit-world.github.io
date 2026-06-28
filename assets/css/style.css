@@ -236,39 +236,85 @@ main { position: relative; z-index: 1; }
 }
 .social:hover { color: #fff; border-color: var(--accent); background: var(--grad-soft); transform: translateY(-4px) rotate(-6deg); }
 
-/* Hero visual / avatar */
+/* Hero visual / 3D parallax profile */
 .hero__visual { display: grid; place-items: center; }
-.hero__avatar { position: relative; width: clamp(240px, 32vw, 360px); aspect-ratio: 1; }
-.hero__avatar-img {
-  position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: cover; border-radius: 50%;
-  border: 2px solid var(--border-strong);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-  z-index: 2;
+.profile3d {
+  position: relative; width: clamp(280px, 36vw, 400px); aspect-ratio: 4 / 5;
+  perspective: 1100px;
 }
-.hero__avatar-glow {
-  position: absolute; inset: 8%; border-radius: 50%;
-  background: var(--grad); filter: blur(45px); opacity: 0.5; z-index: 0;
-  animation: morphGlow 7s ease-in-out infinite;
+.profile3d__scene {
+  position: absolute; inset: 0; transform-style: preserve-3d;
+  transition: transform 0.5s var(--ease);
+  animation: sceneFloat 6s ease-in-out infinite;
 }
-@keyframes morphGlow { 0%, 100% { transform: scale(1); opacity: 0.45; } 50% { transform: scale(1.12); opacity: 0.65; } }
-.hero__avatar-ring {
-  position: absolute; inset: 0; border-radius: 50%;
-  border: 1.5px dashed rgba(124, 92, 255, 0.4); z-index: 1;
-  animation: spin 18s linear infinite;
+.profile3d.is-tilting .profile3d__scene { transition: transform 0.12s linear; animation: none; }
+@keyframes sceneFloat {
+  0%, 100% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
+  50% { transform: rotateX(2deg) rotateY(-3deg) translateY(-10px); }
 }
-.hero__avatar-ring--2 { inset: 7%; border-color: rgba(25, 227, 194, 0.35); border-style: dotted; animation-direction: reverse; animation-duration: 12s; }
-@keyframes spin { to { transform: rotate(360deg); } }
 
-.hero__badge {
-  position: absolute; z-index: 3; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500;
-  padding: 7px 13px; border-radius: 100px; background: rgba(10, 12, 20, 0.85); backdrop-filter: blur(8px);
-  border: 1px solid var(--border-strong); white-space: nowrap; box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  animation: float 4s ease-in-out infinite;
+/* glowing blob behind */
+.profile3d__glow {
+  position: absolute; inset: 14% 10% 6% 10%; border-radius: 50% 50% 46% 46%;
+  background: var(--grad); filter: blur(48px); opacity: 0.55;
+  transform: translateZ(-80px); animation: morphGlow 7s ease-in-out infinite;
 }
-.hero__badge--1 { top: 6%; left: -8%; animation-delay: 0s; }
-.hero__badge--2 { top: 44%; right: -16%; animation-delay: 1.2s; }
-.hero__badge--3 { bottom: 6%; left: 2%; animation-delay: 2.2s; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+@keyframes morphGlow { 0%, 100% { opacity: 0.45; filter: blur(48px); } 50% { opacity: 0.7; filter: blur(60px); } }
+
+/* dashed depth rings */
+.profile3d__ring { position: absolute; border-radius: 26px; pointer-events: none; }
+.profile3d__ring--1 { inset: 10% 4% 2% 4%; border: 1.5px dashed rgba(124, 92, 255, 0.35); transform: translateZ(-30px); }
+.profile3d__ring--2 { inset: 16% 12% 8% 12%; border: 1.5px dotted rgba(25, 227, 194, 0.3); transform: translateZ(-10px); }
+
+/* the card / frame the person steps out of */
+.profile3d__frame {
+  position: absolute; inset: 12% 6% 0 6%; border-radius: 24px;
+  background: linear-gradient(160deg, rgba(124, 92, 255, 0.22), rgba(25, 227, 194, 0.10) 55%, rgba(5, 6, 10, 0.4));
+  border: 1px solid var(--border-strong); overflow: hidden; transform: translateZ(0);
+  box-shadow: inset 0 0 70px rgba(0, 0, 0, 0.35), 0 30px 60px rgba(0, 0, 0, 0.45);
+}
+.profile3d__frame-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: radial-gradient(ellipse at 50% 40%, #000, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 40%, #000, transparent 75%);
+}
+.profile3d__frame-tag {
+  position: absolute; bottom: 14px; left: 14px; font-family: var(--font-mono);
+  font-size: 0.72rem; color: var(--accent-2); padding: 5px 11px; border-radius: 100px;
+  background: rgba(5, 6, 10, 0.6); border: 1px solid var(--border); backdrop-filter: blur(4px);
+}
+.profile3d__frame-corner { position: absolute; width: 26px; height: 26px; }
+.profile3d__frame-corner--tl { top: 12px; left: 12px; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); border-radius: 6px 0 0 0; }
+.profile3d__frame-corner--br { bottom: 12px; right: 12px; border-bottom: 2px solid var(--accent-2); border-right: 2px solid var(--accent-2); border-radius: 0 0 6px 0; }
+
+/* the cutout — pops out in front */
+.profile3d__img {
+  position: absolute; left: 50%; bottom: 0; width: 98%; height: auto;
+  transform: translateX(-50%) translateZ(50px);
+  filter: drop-shadow(0 24px 26px rgba(0, 0, 0, 0.55));
+  pointer-events: none;
+}
+
+/* floating glass badges (deepest pop) */
+.profile3d__badge {
+  position: absolute; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500;
+  padding: 8px 14px; border-radius: 100px; background: rgba(10, 12, 20, 0.82);
+  backdrop-filter: blur(8px); border: 1px solid var(--border-strong); white-space: nowrap;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); animation: float 4s ease-in-out infinite;
+}
+.profile3d__badge--1 { top: 12%; left: -10%; transform: translateZ(120px); animation-delay: 0s; }
+.profile3d__badge--2 { top: 46%; right: -14%; transform: translateZ(150px); animation-delay: 1.2s; }
+.profile3d__badge--3 { bottom: 12%; left: -6%; transform: translateZ(100px); animation-delay: 2.2s; }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -12px; } }
+
+/* sparkles */
+.profile3d__spark { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 14px 2px var(--accent-2); }
+.profile3d__spark--1 { top: 24%; right: 4%; transform: translateZ(90px); background: var(--accent-3); box-shadow: 0 0 14px 2px var(--accent-3); animation: float 5s ease-in-out infinite; }
+.profile3d__spark--2 { bottom: 28%; left: 0%; transform: translateZ(130px); animation: float 4.4s ease-in-out infinite 0.6s; }
 
 /* Hero scroll cue */
 .hero__scroll {
@@ -471,12 +517,15 @@ main { position: relative; z-index: 1; }
   .nav__burger { display: flex; }
   .nav__resume { display: none; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
-  .hero__badge--2 { right: -6%; }
+  .profile3d__badge--2 { right: -4%; }
 }
 
 @media (max-width: 460px) {
   .stat-grid { grid-template-columns: 1fr; }
   .hero__cta { flex-direction: column; }
   .hero__cta .btn { width: 100%; justify-content: center; }
-  .hero__badge { font-size: 0.68rem; padding: 5px 10px; }
+  .profile3d__badge { font-size: 0.68rem; padding: 6px 11px; }
+  .profile3d__badge--1 { left: -4%; }
+  .profile3d__badge--2 { right: -2%; }
+  .profile3d__badge--3 { left: -2%; }
 }
